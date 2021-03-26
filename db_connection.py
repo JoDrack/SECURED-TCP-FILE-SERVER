@@ -1,4 +1,5 @@
 import mysql.connector
+from rich import print
 
 class Db_Connection(object):
 	database_obj = None
@@ -18,8 +19,10 @@ class Db_Connection(object):
 		)
 
 		except Exception as db_connection_err:
-			print('Connection to the Db has failed')
+			print('Connection to the database has failed')
 			raise SystemExit
 
 # creating Db_Connection object to initialize the connection to the database
-db_connection = Db_Connection('localhost','root','@deltageronimo24','stock_ms');
+db_connection = Db_Connection('localhost','root','mysql_db1234','stock_ms');
+print('[bold green][++]Connection to the database has passed')
+
