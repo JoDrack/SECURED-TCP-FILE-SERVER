@@ -10,7 +10,7 @@ class Database_Connection:
 		self.password = password
 		self.database = database
 
-		# calling the try_connection to get connected to the server and database if everyting is right
+		# calling the try_connection method to get connected to the server and database if everyting is right
 		self.try_connection
 
 	@property	
